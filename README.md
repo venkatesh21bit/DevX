@@ -1,2 +1,0 @@
-# DevX
-coding_challenge
