@@ -32,16 +32,6 @@ export default function Home() {
             <button onClick={() => router.push('/2kpage')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Classic Page</button>
           </div>
         );
-      case 'retro':
-        return (
-          <div className="retro-era">
-            <h1 className="text-4xl font-bold">DevX - Retro Era</h1>
-            <p className="text-lg mt-4">Welcome to the retro coding challenge!</p>
-            <button onClick={() => router.push('/90')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Retro Page</button>
-          </div>
-        );
-      default:
-        return null;
     }
   };
 

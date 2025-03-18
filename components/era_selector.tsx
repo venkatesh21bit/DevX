@@ -12,7 +12,6 @@ const EraSelector: React.FC<EraSelectorProps> = ({ selectedEra, onEraChange }) =
       <select id="era" value={selectedEra} onChange={(e) => onEraChange(e.target.value)}>
         <option value="modern">Modern</option>
         <option value="classic">Classic</option>
-        <option value="retro">Retro</option>
       </select>
     </div>
   );
