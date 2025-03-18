@@ -15,31 +15,36 @@ export default function Home() {
   };
 
   const renderContent = () => {
-    switch (selectedEra) {
-      case 'modern':
-        return (
-          <div className="modern-era">
-            <h1 className="text-4xl font-bold">DevX - Modern Era</h1>
-            <p className="text-lg mt-4">Welcome to the modern coding challenge!</p>
-            <button onClick={() => handleNavigation('https://modern-website-three-tau.vercel.app/')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Modern Page</button>
+    return (
+      <>
+        <EraSelector selectedEra={selectedEra} onEraChange={setSelectedEra} />
+        {selectedEra && (
+          <div className="mt-8">
+            {selectedEra === 'modern' && (
+              <div className="modern-era">
+                <h1 className="text-4xl font-bold">DevX - Modern Era</h1>
+                <p className="text-lg mt-4">Welcome to the modern coding challenge!</p>
+                <button onClick={() => handleNavigation('https://modern-website-three-tau.vercel.app/')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Modern Page</button>
+              </div>
+            )}
+            {selectedEra === 'classic' && (
+              <div className="classic-era">
+                <h1 className="text-4xl font-bold">DevX - Classic Era</h1>
+                <p className="text-lg mt-4">Welcome to the classic coding challenge!</p>
+                <button onClick={() => router.push('/2kpage')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Classic Page</button>
+              </div>
+            )}
           </div>
-        );
-      case 'classic':
-        return (
-          <div className="classic-era">
-            <h1 className="text-4xl font-bold">DevX - Classic Era</h1>
-            <p className="text-lg mt-4">Welcome to the classic coding challenge!</p>
-            <button onClick={() => router.push('/2kpage')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Classic Page</button>
-          </div>
-        );
-    }
+        )}
+      </>
+    );
   };
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8 pb-20 gap-4 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       {hasEntered ? (
         <>
-          <EraSelector selectedEra={selectedEra} onEraChange={setSelectedEra} />
+          <p className="text-center text-lg mb-4">Please click the Classical option first and then the Modern option next.</p>
           {renderContent()}
         </>
       ) : (

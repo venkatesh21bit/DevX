@@ -13,7 +13,6 @@ Experience the evolution of the web! **Web Time Machine** allows users to explor
 ## 🛠 Tech Stack
 
 - **Frontend:** Next.js, React, Tailwind CSS
-
 - **Hosting:** Vercel 
 - **Version Control:** Git & GitHub
 
@@ -44,3 +43,7 @@ To run this project locally, follow these steps:
    ```
    http://localhost:3000
    ```
+
+## Additional Repository
+
+There is another repository created and deployed during the coding challenge for showing the modern webpage. You can find it here: [modern_website](https://github.com/venkatesh21bit/modern_website)
