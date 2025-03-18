@@ -13,9 +13,8 @@ Experience the evolution of the web! **Web Time Machine** allows users to explor
 ## 🛠 Tech Stack
 
 - **Frontend:** Next.js, React, Tailwind CSS
-- **Backend:** Node.js, Express.js (if applicable)
-- **Database:** MongoDB / Firebase (if applicable)
-- **Hosting:** Vercel / Netlify / AWS
+
+- **Hosting:** Vercel 
 - **Version Control:** Git & GitHub
 
 ## Installation
