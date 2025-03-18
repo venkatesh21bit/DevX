@@ -5,7 +5,7 @@ Experience the evolution of the web! **Web Time Machine** allows users to explor
 
 ## 🚀 Features
 
-- 🕰 **Explore Web Eras** – Experience websites as they looked in the '90s, 2000s, and beyond.
+- 🕰 **Explore Web Eras** – Experience websites as they looked in the classic and modern era.
 - 🎨 **Authentic UI/UX** – Recreate the design, typography, and interactions of different periods.
 - 🔄 **Interactive Experience** – Navigate pages as they functioned in their respective eras.
 - 🌍 **Tech Evolution Insights** – Learn how web development has changed over time.
