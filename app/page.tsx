@@ -1,12 +1,18 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import EraSelector from '@/components/era_selector';
 import WelcomePage from '@/components/WelcomePage';
 
 export default function Home() {
-  const [selectedEra, setSelectedEra] = useState('modern');
+  const [selectedEra, setSelectedEra] = useState('');
   const [hasEntered, setHasEntered] = useState(false);
+  const router = useRouter();
+
+  const handleNavigation = (url: string) => {
+    window.location.href = url;
+  };
 
   const renderContent = () => {
     switch (selectedEra) {
@@ -15,6 +21,7 @@ export default function Home() {
           <div className="modern-era">
             <h1 className="text-4xl font-bold">DevX - Modern Era</h1>
             <p className="text-lg mt-4">Welcome to the modern coding challenge!</p>
+            <button onClick={() => handleNavigation('https://modern-website-three-tau.vercel.app/')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Modern Page</button>
           </div>
         );
       case 'classic':
@@ -22,6 +29,7 @@ export default function Home() {
           <div className="classic-era">
             <h1 className="text-4xl font-bold">DevX - Classic Era</h1>
             <p className="text-lg mt-4">Welcome to the classic coding challenge!</p>
+            <button onClick={() => router.push('/2kpage')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Classic Page</button>
           </div>
         );
       case 'retro':
@@ -29,6 +37,7 @@ export default function Home() {
           <div className="retro-era">
             <h1 className="text-4xl font-bold">DevX - Retro Era</h1>
             <p className="text-lg mt-4">Welcome to the retro coding challenge!</p>
+            <button onClick={() => router.push('/90')} className="mt-4 px-4 py-2 bg-blue-500 text-white rounded">Go to Retro Page</button>
           </div>
         );
       default:
